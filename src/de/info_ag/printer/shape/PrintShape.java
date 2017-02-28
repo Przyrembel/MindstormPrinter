@@ -34,7 +34,13 @@ public class PrintShape {
 		
 		
 		public void scale(int scale){
-			//TODO
+			//Method multiplies the distance of each point to the starting point while not changing the starting point's coordinates.
+			int i = 1;
+			while(parts.get(i)!=null){
+				parts.get(i).setXParameter(parts.get(i).getXParameter()*scale);
+				parts.get(i).setYParameter(parts.get(i).getYParameter()*scale);
+				++i;
+			}
 		}
 		
 		public Point getStartPoint(){
